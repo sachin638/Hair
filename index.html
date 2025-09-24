@@ -1,215 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cloth shop</title>
-    <link rel="icon" type="icon" href="./img/icon hair.png" id="icon" style="'width:10px' height:10px">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style1.css">
-</head>
-<body  >
-    <header id="top">
-        <i class="fa-solid fa-crown" id="icon"> king</i>
-        <div class="main">
-            <ul>
-                <select name="" id=""><li><a href="#"><option value=""><i class="fa-solid fa-house"></i><option value=""> Home</option>
-                <option value="#">abcd</option>
-                <option value="#">efgh</option>
-                <option value="#">ijkl</option></a></li><select>
-                <li><a href="#"><i class="fa-solid fa-address-card"></i>About</a></li>
-                <li><a href="#"><i class="fa-brands fa-servicestack"></i>Services</a></li>
-                <li><a href="#"><i class="fa-solid fa-phone"></i>Contact</a></li>
-                <li><a href="#"><i class="fa-solid fa-hand-holding-hand"></i>Help_Us</a></li>
-                <li><a href="#"><i class="fa-regular fa-comment-dots"></i>Feedback</a></li>
-            </ul>
-        </div>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hair Studio Shop – Tailwind</title>
+  <link rel="icon" href="./img/icon hair.png" />
 
+  <!-- Tailwind CSS (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Extend Tailwind for slider animation
+    tailwind.config = {
+      theme: {
+        extend: {
+          keyframes: {
+            slide: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-100%)' },
+            },
+          },
+          animation: {
+            slide: 'slide 20s linear infinite',
+          },
+          colors: {
+            brand: {
+              pink: '#df12df',
+            },
+          },
+        },
+      },
+    }
+  </script>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+</head>
+<body class="min-h-screen bg-zinc-900 text-zinc-100 selection:bg-brand-pink/30">
+  <!-- Header -->
+  <header id="top" class="sticky top-0 z-50 bg-brand-pink text-black shadow">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-2">
+      <div class="flex items-center gap-2 text-xl">
+        <i class="fa-solid fa-crown"></i>
+        <span class="font-semibold">King</span>
+      </div>
+
+      <!-- Nav -->
+      <nav class="hidden items-center gap-6 md:flex">
+        <a href="#" class="inline-flex items-center gap-2 hover:opacity-80"><i class="fa-solid fa-house"></i>Home</a>
+        <a href="#about" class="inline-flex items-center gap-2 hover:opacity-80"><i class="fa-solid fa-address-card"></i>About</a>
+        <a href="#services" class="inline-flex items-center gap-2 hover:opacity-80"><i class="fa-brands fa-servicestack"></i>Services</a>
+        <a href="#contact" class="inline-flex items-center gap-2 hover:opacity-80"><i class="fa-solid fa-phone"></i>Contact</a>
+        <a href="#help" class="inline-flex items-center gap-2 hover:opacity-80"><i class="fa-solid fa-hand-holding-hand"></i>Help&nbsp;Us</a>
+        <a href="#feedback" class="inline-flex items-center gap-2 hover:opacity-80"><i class="fa-regular fa-comment-dots"></i>Feedback</a>
+      </nav>
+
+      <button class="md:hidden inline-flex items-center justify-center rounded-xl px-3 py-2 hover:bg-black/10" aria-label="Open menu">
         <i class="fa-solid fa-bars"></i>
-        <i class="fa-solid fa-arrows-rotate " id="restart"></i>
-    </header>
-    <div class="container">
-    <div class="slide">
-        <img src="./img/hair_1.jpeg" alt="cloth image" width="20%" height="600px" >
-        <img src="./img/hair_2.jpeg" alt="hair cut image" width="20%" height="600px">
-        <img src="./img/hair_3.jpeg" alt="hair cut image" width="20%" height="600px">
-        <img src="./img/hair_4.jpeg" alt="hair cut image" width="20%" height="600px">
-        <img src="./img/hair_5.jpeg" alt="hair cut image" width="20%" height="600px">
-        <img src="./img/hair_21.jpeg" alt="hair cut image" width="20%" height="600px">
-        <img src="./img/hair_8.jpeg" alt="cloth image" width="20%" height="600px" >
-        <img src="./img/hair_8.jpeg" alt="hair cut image" width="20%" height="600px">
-        <img src="./img/hair_9.jpeg" alt="hair cut image" width="20%" height="600px">
-        <img src="./img/hair_10.jpeg" alt="hair cut image" width="20%" height="600px">
-        <img src="./img/hair_11.jpeg" alt="hair cut image" width="20%" height="600px">
-        <img src="./img/hair_12.jpeg" alt="hair cut image" width="20%" height="600px">
-        <img src="./img/hair_13.jpeg" alt="hair cut image" width="20%" height="600px">
+      </button>
     </div>
-</div>
-<div class="all_card">
-    <div class="card">
-        <div class="card1">
-            <img src="./img/hair_14.jpeg" alt="hair cut image" >
-                 <p>  Lorem ipsum dolor, sit amet 
-                    consectetur adipisicing elit.
-                    Quod, molestiae!</p>
-                    <i class="fa-regular fa-heart" id="hart"></i>
-                    <i class="fa-regular fa-comment-dots" id="message"></i>
-                    <i class="fa-brands fa-instagram"></i>
-            </div>
+  </header>
+
+  <!-- Slider -->
+  <section class="relative mx-auto max-w-6xl overflow-hidden px-4 pt-4">
+    <div class="flex gap-4 animate-slide will-change-transform">
+      <!-- Repeat images horizontally; ensure each has consistent height -->
+      <img src="./img/hair_1.jpeg" alt="hair style" class="h-[260px] w-auto rounded-xl object-cover" />
+      <img src="./img/hair_2.jpeg" alt="hair style" class="h-[260px] w-auto rounded-xl object-cover" />
+      <img src="./img/hair_3.jpeg" alt="hair style" class="h-[260px] w-auto rounded-xl object-cover" />
+      <img src="./img/hair_4.jpeg" alt="hair style" class="h-[260px] w-auto rounded-xl object-cover" />
+      <img src="./img/hair_5.jpeg" alt="hair style" class="h-[260px] w-auto rounded-xl object-cover" />
+      <img src="./img/hair_21.jpeg" alt="hair style" class="h-[260px] w-auto rounded-xl object-cover" />
+      <img src="./img/hair_8.jpeg" alt="hair style" class="h-[260px] w-auto rounded-xl object-cover" />
+      <img src="./img/hair_8.jpeg" alt="hair style" class="h-[260px] w-auto rounded-xl object-cover" />
+      <img src="./img/hair_9.jpeg" alt="hair style" class="h-[260px] w-auto rounded-xl object-cover" />
+      <img src="./img/hair_10.jpeg" alt="hair style" class="h-[260px] w-auto rounded-xl object-cover" />
+      <img src="./img/hair_11.jpeg" alt="hair style" class="h-[260px] w-auto rounded-xl object-cover" />
+      <img src="./img/hair_12.jpeg" alt="hair style" class="h-[260px] w-auto rounded-xl object-cover" />
+      <img src="./img/hair_13.jpeg" alt="hair style" class="h-[260px] w-auto rounded-xl object-cover" />
     </div>
-    <div class="card">
-        <div class="card1">
-            <img src="./img/hair_15.jpeg" alt="hair cut image" >
-                 <p>  Lorem ipsum dolor, sit amet 
-                      consectetur adipisicing elit. 
-                       Quod, molestiae!
-                </p>
-                <i class="fa-regular fa-heart" id="hart"></i>
-                <i class="fa-regular fa-comment-dots" id="message"></i>
-                <i class="fa-brands fa-instagram"></i>
-            </div>
-    </div>
-    <div class="card">
-        <div class="card1">
-            <img src="./img/hair_16.jpeg" alt="hair cut image" >
-                 <p>  Lorem ipsum dolor, sit amet 
-                      consectetur adipisicing elit. 
-                      Quod, molestiae!</p>
-                <i class="fa-regular fa-heart" id="hart"></i>
-                <i class="fa-regular fa-comment-dots" id="message"></i>
-                <i class="fa-brands fa-instagram"></i>
+  </section>
+
+  <!-- Cards Grid -->
+  <section class="mx-auto max-w-6xl px-4 py-10">
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <!-- Card component template -->
+      <!-- 1 -->
+      <article class="rounded-3xl bg-zinc-800 shadow hover:shadow-lg transition">
+        <img src="./img/hair_14.jpeg" alt="hair cut" class="h-64 w-full rounded-t-3xl object-cover" />
+        <div class="space-y-3 p-4">
+          <p class="text-sm text-zinc-300">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, molestiae!</p>
+          <div class="flex items-center gap-4 text-lg text-zinc-300">
+            <button class="hover:text-pink-400" aria-label="like"><i class="fa-regular fa-heart"></i></button>
+            <button class="hover:text-pink-400" aria-label="comment"><i class="fa-regular fa-comment-dots"></i></button>
+            <a class="ml-auto hover:text-pink-400" href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
         </div>
+      </article>
+
+      <!-- 2 -->
+      <article class="rounded-3xl bg-zinc-800 shadow hover:shadow-lg transition">
+        <img src="./img/hair_15.jpeg" alt="hair cut" class="h-64 w-full rounded-t-3xl object-cover" />
+        <div class="space-y-3 p-4">
+          <p class="text-sm text-zinc-300">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, molestiae!</p>
+          <div class="flex items-center gap-4 text-lg text-zinc-300">
+            <button class="hover:text-pink-400" aria-label="like"><i class="fa-regular fa-heart"></i></button>
+            <button class="hover:text-pink-400" aria-label="comment"><i class="fa-regular fa-comment-dots"></i></button>
+            <a class="ml-auto hover:text-pink-400" href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3 -->
+      <article class="rounded-3xl bg-zinc-800 shadow hover:shadow-lg transition">
+        <img src="./img/hair_16.jpeg" alt="hair cut" class="h-64 w-full rounded-t-3xl object-cover" />
+        <div class="space-y-3 p-4">
+          <p class="text-sm text-zinc-300">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, molestiae!</p>
+          <div class="flex items-center gap-4 text-lg text-zinc-300">
+            <button class="hover:text-pink-400" aria-label="like"><i class="fa-regular fa-heart"></i></button>
+            <button class="hover:text-pink-400" aria-label="comment"><i class="fa-regular fa-comment-dots"></i></button>
+            <a class="ml-auto hover:text-pink-400" href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 4 -->
+      <article class="rounded-3xl bg-zinc-800 shadow hover:shadow-lg transition">
+        <img src="./img/hair_17.jpeg" alt="hair cut" class="h-64 w-full rounded-t-3xl object-cover" />
+        <div class="space-y-3 p-4">
+          <p class="text-sm text-zinc-300">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, molestiae!</p>
+          <div class="flex items-center gap-4 text-lg text-zinc-300">
+            <button class="hover:text-pink-400" aria-label="like"><i class="fa-regular fa-heart"></i></button>
+            <button class="hover:text-pink-400" aria-label="comment"><i class="fa-regular fa-comment-dots"></i></button>
+            <a class="ml-auto hover:text-pink-400" href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 5 -->
+      <article class="rounded-3xl bg-zinc-800 shadow hover:shadow-lg transition">
+        <img src="./img/hair_18.jpeg" alt="hair cut" class="h-64 w-full rounded-t-3xl object-cover" />
+        <div class="space-y-3 p-4">
+          <p class="text-sm text-zinc-300">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, molestiae!</p>
+          <div class="flex items-center gap-4 text-lg text-zinc-300">
+            <button class="hover:text-pink-400" aria-label="like"><i class="fa-regular fa-heart"></i></button>
+            <button class="hover:text-pink-400" aria-label="comment"><i class="fa-regular fa-comment-dots"></i></button>
+            <a class="ml-auto hover:text-pink-400" href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 6 -->
+      <article class="rounded-3xl bg-zinc-800 shadow hover:shadow-lg transition">
+        <img src="./img/hair_19.jpeg" alt="hair cut" class="h-64 w-full rounded-t-3xl object-cover" />
+        <div class="space-y-3 p-4">
+          <p class="text-sm text-zinc-300">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, molestiae!</p>
+          <div class="flex items-center gap-4 text-lg text-zinc-300">
+            <button class="hover:text-pink-400" aria-label="like"><i class="fa-regular fa-heart"></i></button>
+            <button class="hover:text-pink-400" aria-label="comment"><i class="fa-regular fa-comment-dots"></i></button>
+            <a class="ml-auto hover:text-pink-400" href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 7 -->
+      <article class="rounded-3xl bg-zinc-800 shadow hover:shadow-lg transition">
+        <img src="./img/hair_20.jpeg" alt="hair cut" class="h-64 w-full rounded-t-3xl object-cover" />
+        <div class="space-y-3 p-4">
+          <p class="text-sm text-zinc-300">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, molestiae!</p>
+          <div class="flex items-center gap-4 text-lg text-zinc-300">
+            <button class="hover:text-pink-400" aria-label="like"><i class="fa-regular fa-heart"></i></button>
+            <button class="hover:text-pink-400" aria-label="comment"><i class="fa-regular fa-comment-dots"></i></button>
+            <a class="ml-auto hover:text-pink-400" href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 8 -->
+      <article class="rounded-3xl bg-zinc-800 shadow hover:shadow-lg transition">
+        <img src="./img/hair_21.jpeg" alt="hair cut" class="h-64 w-full rounded-t-3xl object-cover" />
+        <div class="space-y-3 p-4">
+          <p class="text-sm text-zinc-300">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, molestiae!</p>
+          <div class="flex items-center gap-4 text-lg text-zinc-300">
+            <button class="hover:text-pink-400" aria-label="like"><i class="fa-regular fa-heart"></i></button>
+            <button class="hover:text-pink-400" aria-label="comment"><i class="fa-regular fa-comment-dots"></i></button>
+            <a class="ml-auto hover:text-pink-400" href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 9 -->
+      <article class="rounded-3xl bg-zinc-800 shadow hover:shadow-lg transition">
+        <img src="./img/hair_22.jpeg" alt="hair cut" class="h-64 w-full rounded-t-3xl object-cover" />
+        <div class="space-y-3 p-4">
+          <p class="text-sm text-zinc-300">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, molestiae!</p>
+          <div class="flex items-center gap-4 text-lg text-zinc-300">
+            <button class="hover:text-pink-400" aria-label="like"><i class="fa-regular fa-heart"></i></button>
+            <button class="hover:text-pink-400" aria-label="comment"><i class="fa-regular fa-comment-dots"></i></button>
+            <a class="ml-auto hover:text-pink-400" href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 10 -->
+      <article class="rounded-3xl bg-zinc-800 shadow hover:shadow-lg transition">
+        <img src="./img/hair_23.jpeg" alt="hair cut" class="h-64 w-full rounded-t-3xl object-cover" />
+        <div class="space-y-3 p-4">
+          <p class="text-sm text-zinc-300">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, molestiae!</p>
+          <div class="flex items-center gap-4 text-lg text-zinc-300">
+            <button class="hover:text-pink-400" aria-label="like"><i class="fa-regular fa-heart"></i></button>
+            <button class="hover:text-pink-400" aria-label="comment"><i class="fa-regular fa-comment-dots"></i></button>
+            <a class="ml-auto hover:text-pink-400" href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 11 -->
+      <article class="rounded-3xl bg-zinc-800 shadow hover:shadow-lg transition">
+        <img src="./img/hair_24.jpeg" alt="hair cut" class="h-64 w-full rounded-t-3xl object-cover" />
+        <div class="space-y-3 p-4">
+          <p class="text-sm text-zinc-300">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, molestiae!</p>
+          <div class="flex items-center gap-4 text-lg text-zinc-300">
+            <button class="hover:text-pink-400" aria-label="like"><i class="fa-regular fa-heart"></i></button>
+            <button class="hover:text-pink-400" aria-label="comment"><i class="fa-regular fa-comment-dots"></i></button>
+            <a class="ml-auto hover:text-pink-400" href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </article>
+
+      <!-- 12 -->
+      <article class="rounded-3xl bg-zinc-800 shadow hover:shadow-lg transition">
+        <img src="./img/hair_25.jpeg" alt="hair cut" class="h-64 w-full rounded-t-3xl object-cover" />
+        <div class="space-y-3 p-4">
+          <p class="text-sm text-zinc-300">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quod, molestiae!</p>
+          <div class="flex items-center gap-4 text-lg text-zinc-300">
+            <button class="hover:text-pink-400" aria-label="like"><i class="fa-regular fa-heart"></i></button>
+            <button class="hover:text-pink-400" aria-label="comment"><i class="fa-regular fa-comment-dots"></i></button>
+            <a class="ml-auto hover:text-pink-400" href="#" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </article>
     </div>
-    <div class="card">
-        <div class="card1">
-            <img src="./img/hair_17.jpeg" alt="hair cut image" >
-                <p>  Lorem ipsum dolor, sit amet 
-                       consectetur adipisicing elit. 
-                       Quod, molestiae!
-                </p>
-                <i class="fa-regular fa-heart" id="hart"></i>
-                <i class="fa-regular fa-comment-dots" id="message"></i>
-                <i class="fa-brands fa-instagram"></i>
-        </div>                    
+  </section>
+
+  <!-- Footer -->
+  <footer class="mt-8 bg-zinc-100 text-zinc-900">
+    <div class="mx-auto grid max-w-6xl gap-8 px-4 py-10 sm:grid-cols-3">
+      <div>
+        <h3 class="mb-4 text-xl font-semibold">Reach Us</h3>
+        <p class="flex items-start gap-2 text-zinc-700"><i class="fa-solid fa-location-dot mt-1"></i> shop no 1. avigna IX Tower, Dr BA Road, Lalbaugh</p>
+        <p class="mt-2 text-zinc-700">08048127670</p>
+        <p class="text-zinc-700">vinodhairstudio67@gmail.com</p>
+      </div>
+      <div>
+        <h3 class="mb-4 text-xl font-semibold">Subscribe To Our Updates</h3>
+        <form class="flex max-w-sm items-center gap-2">
+          <input type="email" placeholder="your@email.com" class="w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 outline-none focus:border-brand-pink focus:ring-2 focus:ring-brand-pink/30" />
+          <button type="submit" class="rounded-lg bg-zinc-900 px-4 py-2 text-white hover:bg-zinc-800">Send</button>
+        </form>
+      </div>
+      <div>
+        <h3 class="mb-4 text-xl font-semibold">Share Us On</h3>
+        <p class="text-zinc-700">Vinodhairstudio/</p>
+      </div>
     </div>
-    <div class="card">
-        <div class="card1">
-            <img src="./img/hair_18.jpeg" alt="hair cut image" >
-                <p>  Lorem ipsum dolor, sit amet 
-                       consectetur adipisicing elit. 
-                       Quod, molestiae!
-                </p>
-                <i class="fa-regular fa-heart" id="hart"></i>
-                <i class="fa-regular fa-comment-dots" id="message"></i>
-                <i class="fa-brands fa-instagram"></i>
-        </div>                    
-    </div>
-    <div class="card">
-        <div class="card1">
-            <img src="./img/hair_19.jpeg" alt="hair cut image" >
-                <p>  Lorem ipsum dolor, sit amet 
-                       consectetur adipisicing elit. 
-                       Quod, molestiae!
-                </p>
-                <i class="fa-regular fa-heart" id="hart"></i>
-                <i class="fa-regular fa-comment-dots" id="message"></i>
-                <i class="fa-brands fa-instagram"></i>
-        </div>                    
-    </div>
-    <div class="card">
-        <div class="card1">
-            <img src="./img/hair_20.jpeg" alt="hair cut image" >
-                <p>  Lorem ipsum dolor, sit amet 
-                       consectetur adipisicing elit. 
-                       Quod, molestiae!
-                </p>
-                <i class="fa-regular fa-heart" id="hart"></i>
-                <i class="fa-regular fa-comment-dots" id="message"></i>
-                <i class="fa-brands fa-instagram"></i>
-        </div>                    
-    </div>
-    <div class="card">
-        <div class="card1">
-            <img src="./img/hair_21.jpeg" alt="hair cut image" >
-                <p>  Lorem ipsum dolor, sit amet 
-                       consectetur adipisicing elit. 
-                       Quod, molestiae!
-                </p>
-                <i class="fa-regular fa-heart" id="hart"></i>
-                <i class="fa-regular fa-comment-dots" id="message"></i>
-                <i class="fa-brands fa-instagram"></i>
-        </div>                    
-    </div>
-    <div class="card">
-        <div class="card1">
-            <img src="./img/hair_22.jpeg" alt="hair cut image" >
-                <p>  Lorem ipsum dolor, sit amet 
-                       consectetur adipisicing elit. 
-                       Quod, molestiae!
-                    </p>
-                <i class="fa-regular fa-heart" id="hart"></i>
-                <i class="fa-regular fa-comment-dots" id="message"></i>
-                <i class="fa-brands fa-instagram"></i>
-        </div>                    
-    </div>
-    <div class="card">
-        <div class="card1">
-            <img src="./img/hair_23.jpeg" alt="hair cut image" >
-                <p>  Lorem ipsum dolor, sit amet 
-                       consectetur adipisicing elit. 
-                       Quod, molestiae!
-                </p>
-                <i class="fa-regular fa-heart" id="hart"></i>
-                <i class="fa-regular fa-comment-dots" id="message"></i>
-                <i class="fa-brands fa-instagram"></i>
-        </div>                    
-    </div>
-    <div class="card">
-        <div class="card1">
-            <img src="./img/hair_24.jpeg" alt="hair cut image" >
-                <p>  Lorem ipsum dolor, sit amet 
-                       consectetur adipisicing elit. 
-                       Quod, molestiae!
-                </p>
-                <i class="fa-regular fa-heart" id="hart"></i>
-                <i class="fa-regular fa-comment-dots" id="message"></i>
-                <i class="fa-brands fa-instagram"></i>
-        </div>                    
-    </div>
-    <div class="card">
-        <div class="card1">
-            <img src="./img/hair_25.jpeg" alt="hair cut image" >
-                <p>  Lorem ipsum dolor, sit amet 
-                       consectetur adipisicing elit. 
-                       Quod, molestiae!
-                </p>
-                <i class="fa-regular fa-heart" id="hart"></i>
-                <i class="fa-regular fa-comment-dots" id="message"></i>
-                <i class="fa-brands fa-instagram"></i>
-        </div>                    
-    </div>
-</div>
-<div class="footer">
-      
-    <div class="footer1">
-        <h3 class="reach_us">Reach Us</h3>
-        <i id="" class="fa-solid fa-location-dot"></i>
-        <p>shop no 1. avigna IX Tower , Dr BA Road,Lalbaugh </p>        
-        08048127670
-        vinodhairstudio67@gmail.com
-    </div>
-<div class="footer2">
-    <h2>Subscribe To Our Updates</h2>
-    <input type="text"><button>send</button>
-</div>
-<div class="footer3">
-    <h3>Share Us On</h3>
-    <h4>Vinodhairstudio/</h4>
-</div>
-</div>
-<div class="fixed_pst">
-    <!-- <button class="fixed">top</button> -->
-    <a href="#top">top</a>
-</div>
+  </footer>
+
+  <!-- Back to top -->
+  <a href="#top" class="fixed bottom-4 right-4 rounded-full bg-brand-pink px-4 py-2 text-black shadow hover:opacity-90">Top</a>
 </body>
 </html>
